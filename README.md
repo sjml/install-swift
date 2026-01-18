@@ -16,7 +16,7 @@ development snapshot like `swift-DEVELOPMENT-SNAPSHOT-2021-11-12-a`, or a snapsh
 - name: Install Swift
   uses: slashmo/install-swift@v0.1.0
   with:
-    version: 5.5
+    swift-version: 5.5
 ```
 
 After adding this step, all following steps in this job will automatically use the newly installed Swift version:
@@ -46,7 +46,7 @@ jobs:
     - name: Install Swift
       uses: slashmo/install-swift@v0.1.0
       with:
-        version: ${{ matrix.swift }}
+        swift-version: ${{ matrix.swift }}
     - name: Checkout
       uses: actions/checkout@v2
     - name: Run Tests
